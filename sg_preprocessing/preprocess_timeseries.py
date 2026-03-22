@@ -235,6 +235,16 @@ def clean_timeseries_file(input_path, output_path, ranges):
         # Clip ranges
         df[col] = clip_variable(df[col], col, ranges)
 
+        # Missing value handling (NEW)
+        if col == "Hours":
+            continue
+
+        # Create missing indicator BEFORE imputation
+        df[col + "_missing"] = df[col].isna().astype(int)
+
+        # Forward fill then backward fill
+        df[col] = df[col].ffill().bfill()
+    
     df.to_csv(output_path, index=False)
 
 
