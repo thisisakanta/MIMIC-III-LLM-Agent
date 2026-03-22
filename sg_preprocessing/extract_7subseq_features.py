@@ -61,14 +61,16 @@ def compute_stats(values):
 # ----------------------------------------
 # Extract features for one patient
 # ----------------------------------------
-
+# 17 variables × 7 subsequences × 6 stats = 714
+# 17 variables x 7 subsequences (missing flags) = 119
+# 714 (stats)+ 119 (subsequence missing flags)= 833+ label = 834
 def extract_patient_features(file_path):
 
     df = pd.read_csv(file_path)
 
     df = df.sort_values("Hours")
 
-    variables = [c for c in df.columns if c != "Hours"]
+    variables = [c for c in df.columns if c != "Hours" and not c.endswith("_missing")]
 
     features = {}
 
@@ -82,11 +84,14 @@ def extract_patient_features(file_path):
 
             stats = compute_stats(subseq)
 
+            # Add statistical features (UNCHANGED)
             for stat_name, val in stats.items():
-
                 feature_name = f"{var}_{name}_{stat_name}"
-
                 features[feature_name] = val
+
+            # Add missing indicator (NEW)
+            missing_flag = int(subseq.dropna().shape[0] == 0)
+            features[f"{var}_{name}_missing"] = missing_flag
 
     return features
 
