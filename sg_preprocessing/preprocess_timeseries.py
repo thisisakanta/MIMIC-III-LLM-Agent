@@ -1,16 +1,18 @@
 import os
-import re
 import numpy as np
 import pandas as pd
 from pathlib import Path
+from tqdm import tqdm
+
+INPUT_DIR = "data/in-hospital-mortality"
+OUTPUT_DIR = "data/in-hospital-mortality-cleaned"
+
+Path(OUTPUT_DIR).mkdir(parents=True, exist_ok=True)
 
 ############################################################
-# CONFIG
+# CLEANING FUNCTION MAP
 ############################################################
 
-MAX_HOURS = 48.0
-
-# Map your variable names to cleaning functions
 CLEAN_FNS = {
     "Capillary refill rate": "clean_crr",
     "Diastolic blood pressure": "clean_dbp",
@@ -22,14 +24,13 @@ CLEAN_FNS = {
     "Temperature": "clean_temperature",
     "Weight": "clean_weight",
     "Height": "clean_height",
-    "Glascow coma scale eye opening": "clean_gcs_eye",
-    "Glascow coma scale motor response": "clean_gcs_motor",
-    "Glascow coma scale verbal response": "clean_gcs_verbal"
+    "Glasgow coma scale eye opening": "clean_gcs_eye",
+    "Glasgow coma scale motor response": "clean_gcs_motor",
+    "Glasgow coma scale verbal response": "clean_gcs_verbal"
 }
 
-
 ############################################################
-# Cleaning Functions (adapted for wide format)
+# CLEANING FUNCTIONS
 ############################################################
 
 def clean_sbp(series):
@@ -49,11 +50,16 @@ def clean_dbp(series):
 
 
 def clean_crr(series):
-    s = series.astype(str)
-    out = pd.Series(np.nan, index=series.index)
-    out[(s == "Normal <3 secs") | (s == "Brisk")] = 0
-    out[(s == "Abnormal >3 secs") | (s == "Delayed")] = 1
-    return out
+    s = series.astype(str).str.strip()
+    mapping = {
+        "Normal <3 secs": 0,
+        "Brisk": 0,
+        "Abnormal >3 secs": 1,
+        "Delayed": 1
+    }
+    mapped = s.map(mapping)
+    numeric = pd.to_numeric(series, errors="coerce")
+    return mapped.combine_first(numeric)
 
 
 def clean_fio2(series):
@@ -69,14 +75,13 @@ def clean_lab(series):
 
 def clean_o2sat(series):
     v = pd.to_numeric(series, errors="coerce")
-    idx = (v <= 1.0)
+    idx = v <= 1.0
     v.loc[idx] = v.loc[idx] * 100.0
     return v
 
 
 def clean_temperature(series):
     v = pd.to_numeric(series, errors="coerce")
-    # assume values >= 79 are Fahrenheit
     idx = v >= 79
     v.loc[idx] = (v.loc[idx] - 32) * 5.0 / 9.0
     return v
@@ -84,7 +89,6 @@ def clean_temperature(series):
 
 def clean_weight(series):
     v = pd.to_numeric(series, errors="coerce")
-    # assume > 250 likely lb
     idx = v > 250
     v.loc[idx] = v.loc[idx] * 0.453592
     return v
@@ -92,52 +96,27 @@ def clean_weight(series):
 
 def clean_height(series):
     v = pd.to_numeric(series, errors="coerce")
-    # assume < 3 likely meters, > 3 likely cm already
     idx = (v > 0) & (v < 3)
     v.loc[idx] = v.loc[idx] * 100.0
     return v
 
-def clean_crr(series):
-    s = series.astype(str).str.strip()
-
-    mapping = {
-        "Normal <3 secs": 0,
-        "Brisk": 0,
-        "Abnormal >3 secs": 1,
-        "Delayed": 1
-    }
-
-    # First try direct mapping
-    mapped = s.map(mapping)
-
-    # Keep numeric if already numeric
-    numeric = pd.to_numeric(series, errors="coerce")
-
-    return mapped.combine_first(numeric)
 
 def clean_gcs_eye(series):
     s = series.astype(str).str.strip()
-
     mapping = {
         "Spontaneously": 4,
         "To Speech": 3,
         "To Pain": 2,
         "None": 1
     }
-
     mapped = s.map(mapping)
-
-    # Handle cases like "4 Spontaneously"
-    numeric_prefix = s.str.extract(r"^(\d+)")[0]
-    numeric_prefix = pd.to_numeric(numeric_prefix, errors="coerce")
-
+    numeric_prefix = pd.to_numeric(s.str.extract(r"^(\d+)")[0], errors="coerce")
     numeric = pd.to_numeric(series, errors="coerce")
-
     return mapped.combine_first(numeric_prefix).combine_first(numeric)
+
 
 def clean_gcs_motor(series):
     s = series.astype(str).str.strip()
-
     mapping = {
         "Obeys Commands": 6,
         "Localizes Pain": 5,
@@ -146,19 +125,14 @@ def clean_gcs_motor(series):
         "Extension": 2,
         "None": 1
     }
-
     mapped = s.map(mapping)
-
-    numeric_prefix = s.str.extract(r"^(\d+)")[0]
-    numeric_prefix = pd.to_numeric(numeric_prefix, errors="coerce")
-
+    numeric_prefix = pd.to_numeric(s.str.extract(r"^(\d+)")[0], errors="coerce")
     numeric = pd.to_numeric(series, errors="coerce")
-
     return mapped.combine_first(numeric_prefix).combine_first(numeric)
+
 
 def clean_gcs_verbal(series):
     s = series.astype(str).str.strip()
-
     mapping = {
         "Oriented": 5,
         "Confused": 4,
@@ -166,24 +140,35 @@ def clean_gcs_verbal(series):
         "Incomprehensible": 2,
         "None": 1
     }
-
     mapped = s.map(mapping)
-
-    numeric_prefix = s.str.extract(r"^(\d+)")[0]
-    numeric_prefix = pd.to_numeric(numeric_prefix, errors="coerce")
-
+    numeric_prefix = pd.to_numeric(s.str.extract(r"^(\d+)")[0], errors="coerce")
     numeric = pd.to_numeric(series, errors="coerce")
-
     return mapped.combine_first(numeric_prefix).combine_first(numeric)
 
+############################################################
+# APPLY CLEANING
+############################################################
 
+def clean_dataframe(df):
+
+    for col in df.columns:
+        if col == "Hours":
+            continue
+
+        if col in CLEAN_FNS:
+            df[col] = globals()[CLEAN_FNS[col]](df[col])
+        else:
+            df[col] = pd.to_numeric(df[col], errors="coerce")
+
+    return df
 
 ############################################################
-# Range Clipping
+# LOAD VARIABLE RANGES & CLIPPING
 ############################################################
 
 def load_variable_ranges(path):
     df = pd.read_csv(path)
+
     df = df.rename(columns={
         "LEVEL2": "VARIABLE",
         "OUTLIER LOW": "OUTLIER_LOW",
@@ -191,107 +176,167 @@ def load_variable_ranges(path):
         "VALID HIGH": "VALID_HIGH",
         "OUTLIER HIGH": "OUTLIER_HIGH"
     })
+
     df = df.set_index("VARIABLE")
+
     return df
 
-
 def clip_variable(series, var_name, ranges):
+
     if var_name not in ranges.index:
         return series
 
     r = ranges.loc[var_name]
+
     v = series.copy()
 
+    # remove extreme outliers
     v[v < r.OUTLIER_LOW] = np.nan
     v[v > r.OUTLIER_HIGH] = np.nan
+
+    # clip to valid range
     v[v < r.VALID_LOW] = r.VALID_LOW
     v[v > r.VALID_HIGH] = r.VALID_HIGH
 
     return v
 
+############################################################
+# BINNING
+############################################################
+
+def bin_time_series(df):
+    df["time_bin"] = df["Hours"].astype(int)
+    df = df.groupby("time_bin").mean(numeric_only=True)
+
+    full_index = pd.Index(range(48), name="time_bin")
+    df = df.reindex(full_index)
+
+    df["Hours"] = df.index
+    return df.reset_index(drop=True)
 
 ############################################################
-# Main Cleaning Logic
+# TIME SINCE LAST OBS
 ############################################################
 
-def clean_timeseries_file(input_path, output_path, ranges):
+def add_time_since_last_obs(series):
+    last_seen = -1
+    result = []
 
-    df = pd.read_csv(input_path)
+    for i, val in enumerate(series):
+        if not pd.isna(val):
+            last_seen = i
+            result.append(0)
+        else:
+            result.append(i - last_seen if last_seen != -1 else np.nan)
 
-    # restrict to first 48 hours
-    df = df[df["Hours"] <= MAX_HOURS].copy()
+    return result
+
+############################################################
+# MATRIX + MASK
+############################################################
+
+def build_matrix_and_mask(df):
+
+    channels = [c for c in df.columns if c != "Hours"]
+
+    T = len(df)
+    F = len(channels)
+
+    data_matrix = np.zeros((T, F))
+    mask_matrix = np.zeros((T, F))
+
+    for i, col in enumerate(channels):
+        values = df[col].values
+        mask = ~pd.isna(values)
+
+        data_matrix[:, i] = np.nan_to_num(values, nan=0.0)
+        mask_matrix[:, i] = mask.astype(int)
+
+    return data_matrix, mask_matrix
+
+############################################################
+# MAIN FILE PROCESSING
+############################################################
+
+def preprocess_file(file_path, ranges):
+
+    df = pd.read_csv(file_path)
+
+    df = clean_dataframe(df)
+    
+    df = df[df["Hours"] <= 48].copy()
+
+    # CLIPPING ADDED HERE
+    for col in df.columns:
+        if col != "Hours":
+            df[col] = clip_variable(df[col], col, ranges)
+
+    df = df.sort_values("Hours")
+
+    df = bin_time_series(df)
+
+    df_before_fill = df.copy()
 
     for col in df.columns:
         if col == "Hours":
             continue
 
-        # Apply cleaning if available
-        if col in CLEAN_FNS:
-            fn = globals()[CLEAN_FNS[col]]
-            df[col] = fn(df[col])
-        else:
-            df[col] = pd.to_numeric(df[col], errors="coerce")
-
-        # Clip ranges
-        df[col] = clip_variable(df[col], col, ranges)
-
-        # Missing value handling (NEW)
-        if col == "Hours":
-            continue
-
-        # Create missing indicator BEFORE imputation
         df[col + "_missing"] = df[col].isna().astype(int)
+        df[col + "_time_since"] = add_time_since_last_obs(df[col])
+        df[col + "_delta"] = df[col].diff()
 
-        # Forward fill then backward fill
-        df[col] = df[col].ffill().bfill()
-    
-    df.to_csv(output_path, index=False)
+    data_matrix, mask_matrix = build_matrix_and_mask(df_before_fill)
 
+    # controlled fill
+    for col in df.columns:
+        if col != "Hours":
+            df[col] = df[col].ffill(limit=3)
+
+    return df, data_matrix, mask_matrix
 
 ############################################################
-# Bulk Preprocessing
+# PROCESS SPLIT
 ############################################################
 
-def preprocess_split(input_dir, output_dir, ranges):
+def process_split(split, ranges):
 
-    input_dir = Path(input_dir)
-    output_dir = Path(output_dir)
-    output_dir.mkdir(parents=True, exist_ok=True)
+    input_dir = os.path.join(INPUT_DIR, split)
+    output_dir = os.path.join(OUTPUT_DIR, split)
+    matrix_dir = os.path.join(OUTPUT_DIR, f"{split}_matrices")
 
-    files = list(input_dir.glob("*_timeseries.csv"))
+    Path(output_dir).mkdir(parents=True, exist_ok=True)
+    Path(matrix_dir).mkdir(parents=True, exist_ok=True)
 
-    for f in files:
-        out_file = output_dir / f.name
-        if out_file.exists():
-            continue  # caching
+    files = [f for f in os.listdir(input_dir) if f.endswith("_timeseries.csv")]
 
-        clean_timeseries_file(f, out_file, ranges)
+    for f in tqdm(files):
 
+        input_path = os.path.join(input_dir, f)
+        output_path = os.path.join(output_dir, f)
 
-def run_full_preprocessing(data_root):
+        df, data_matrix, mask_matrix = preprocess_file(input_path, ranges)
+
+        df.to_csv(output_path, index=False)
+
+        np.save(os.path.join(matrix_dir, f.replace(".csv", "_data.npy")), data_matrix)
+        np.save(os.path.join(matrix_dir, f.replace(".csv", "_mask.npy")), mask_matrix)
+
+############################################################
+# MAIN
+############################################################
+
+if __name__ == "__main__":
 
     ranges_path = os.path.join(
-        data_root,
-        "mimic3benchmark/resources/variable_ranges.csv"
+        "mimic3benchmark",
+        "resources",
+        "variable_ranges.csv"
     )
 
     ranges = load_variable_ranges(ranges_path)
 
     for split in ["train", "test"]:
-        input_dir = os.path.join(
-            data_root,
-            "data/in-hospital-mortality",
-            split
-        )
-        output_dir = os.path.join(
-            data_root,
-            "data/in-hospital-mortality-cleaned",
-            split
-        )
-
-        preprocess_split(input_dir, output_dir, ranges)
+        print(f"Processing {split}...")
+        process_split(split, ranges)
 
     print("Preprocessing complete.")
-
-if __name__ == "__main__":
-    run_full_preprocessing(".")
