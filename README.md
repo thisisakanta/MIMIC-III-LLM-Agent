@@ -1,22 +1,11 @@
-To get the data on 6 hour basis::
+#XGBoost Results with preprocessing and & 7 Statistical features including Age
 
-    # install the requirements
+## change the data path and path for all_stays.csv
 
-    # change the data path and output path accordingly in the data_extract_6_hour.py
+## Modifications made to previous code:
 
-    ## DATA_PATH = ""
+1. Included Age as a feature
+2. Included explicit mapping for Glascow coma scale features in preprocessing
+3. Used different XGBoost parameters (may need more fine-tuning)
 
-    ## OUTPUT_FILE = ""
 
-    ## python data_extract_6_hour.py
-
-    ## need to run it for train ,test, val by chaging here to get all the processed dataset ---(need to change in the line 84 and 85)##
-
-To get the data on overall statistical data that has been used in the baseline paper(Linear Regression,Random Forest) ::
-
-    ## in the parser add the correct data path
-    # run python extract_all_statistics_feature.py --save_features
-
-After that you can run to get the mean data from the generated CSV's with the correct path
-
-    #python data_extract_mean.py
