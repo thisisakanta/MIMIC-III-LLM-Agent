@@ -1,4 +1,4 @@
-# XGBoost Results with preprocessing and & 7 Statistical features including Age
+# XGBoost Results with preprocessing and 7 Statistical features including Age
 
 ## change the data path and path for all_stays.csv
 
