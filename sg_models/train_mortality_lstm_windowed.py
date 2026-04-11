@@ -1,4 +1,5 @@
 import os
+import random
 import numpy as np
 import pandas as pd
 from tqdm import tqdm
@@ -30,6 +31,27 @@ WEIGHT_DECAY = 1e-4
 HIDDEN = 64
 DROPOUT = 0.3
 NUM_WORKERS = 0  # Mac-safe
+SEED = 42
+
+
+# -----------------------------
+# Reproducibility
+# -----------------------------
+def set_seed(seed: int):
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed(seed)
+        torch.cuda.manual_seed_all(seed)
+
+    # Deterministic behavior
+    torch.use_deterministic_algorithms(True, warn_only=True)
+
+    if hasattr(torch.backends, "cudnn"):
+        torch.backends.cudnn.deterministic = True
+        torch.backends.cudnn.benchmark = False
 
 
 # -----------------------------
@@ -69,7 +91,6 @@ def compute_train_stats_from_observed(matrix_dir: str, listfile_path: str):
             sum_x2 = np.zeros(F, dtype=np.float64)
             count_x = np.zeros(F, dtype=np.float64)
 
-        # Only observed values contribute to stats
         sum_x += (X * M).sum(axis=0)
         sum_x2 += ((X ** 2) * M).sum(axis=0)
         count_x += M.sum(axis=0)
@@ -100,7 +121,7 @@ class MortalityNPYDataset(Dataset):
 
             data_path, mask_path = get_matrix_paths(matrix_dir, stay)
             if os.path.exists(data_path) and os.path.exists(mask_path):
-                self.samples.append((data_path, mask_path, y))
+                self.samples.append((stay, data_path, mask_path, y))
 
         print(f"Loaded {len(self.samples)} samples from {matrix_dir} using {os.path.basename(listfile_path)}")
 
@@ -108,7 +129,7 @@ class MortalityNPYDataset(Dataset):
         return len(self.samples)
 
     def __getitem__(self, idx):
-        data_path, mask_path, y = self.samples[idx]
+        stay, data_path, mask_path, y = self.samples[idx]
 
         X = np.load(data_path).astype(np.float32)   # (48, F)
         M = np.load(mask_path).astype(np.float32)   # (48, F)
@@ -131,6 +152,7 @@ class MortalityNPYDataset(Dataset):
             torch.tensor(X_final, dtype=torch.float32),
             torch.tensor(length, dtype=torch.long),
             torch.tensor(y, dtype=torch.float32),
+            stay,
         )
 
 
@@ -138,7 +160,7 @@ class MortalityNPYDataset(Dataset):
 # Collate
 # -----------------------------
 def collate_fn(batch):
-    xs, lens, ys = zip(*batch)
+    xs, lens, ys, stays = zip(*batch)
 
     lengths = torch.stack(lens)
     y = torch.stack(ys)
@@ -150,7 +172,7 @@ def collate_fn(batch):
     for i, x in enumerate(xs):
         x_pad[i, : x.shape[0], :] = x
 
-    return x_pad, lengths, y
+    return x_pad, lengths, y, list(stays)
 
 
 # -----------------------------
@@ -176,7 +198,7 @@ class LSTMClassifier(nn.Module):
             x, lengths.cpu(), batch_first=True, enforce_sorted=False
         )
         _, (h_n, _) = self.lstm(packed)
-        h_last = h_n[-1]  # (B, H)
+        h_last = h_n[-1]
         h_last = self.dropout(h_last)
         return self.head(h_last).squeeze(1)
 
@@ -189,7 +211,7 @@ def evaluate(model, loader, device):
     model.eval()
     ys, ps = [], []
 
-    for x, lengths, y in loader:
+    for x, lengths, y, _ in loader:
         x = x.to(device)
         lengths = lengths.to(device)
 
@@ -205,11 +227,45 @@ def evaluate(model, loader, device):
     return roc_auc_score(y_true, p), average_precision_score(y_true, p)
 
 
+@torch.no_grad()
+def collect_predictions(model, loader, device):
+    model.eval()
+
+    stays_all = []
+    ys_all = []
+    probs_all = []
+
+    for x, lengths, y, stays in loader:
+        x = x.to(device)
+        lengths = lengths.to(device)
+
+        logits = model(x, lengths)
+        probs = torch.sigmoid(logits).cpu().numpy()
+
+        stays_all.extend(stays)
+        ys_all.extend(y.numpy().tolist())
+        probs_all.extend(probs.tolist())
+
+    pred_df = pd.DataFrame({
+        "stay": stays_all,
+        "y_true": ys_all,
+        "lstm_prob": probs_all,
+    })
+
+    return pred_df
+
+
 # -----------------------------
 # Train
 # -----------------------------
 def main():
+    set_seed(SEED)
     device = torch.device("cpu")
+    print(f"Using SEED={SEED}")
+
+    # Reproducible DataLoader shuffling
+    g = torch.Generator()
+    g.manual_seed(SEED)
 
     # Train-only stats
     mean, std = compute_train_stats_from_observed(TRAIN_MATRIX_DIR, TRAIN_LISTFILE)
@@ -225,6 +281,7 @@ def main():
         shuffle=True,
         num_workers=NUM_WORKERS,
         collate_fn=collate_fn,
+        generator=g,
     )
     val_loader = DataLoader(
         val_ds,
@@ -241,11 +298,10 @@ def main():
         collate_fn=collate_fn,
     )
 
-    sample_x, _, _ = train_ds[0]
+    sample_x, _, _, _ = train_ds[0]
     input_dim = sample_x.shape[1]
     print("Input dimension:", input_dim)
 
-    # pos_weight from official train only
     y_train = pd.read_csv(TRAIN_LISTFILE)["y_true"].astype(int).to_numpy()
     pos = y_train.sum()
     neg = len(y_train) - pos
@@ -269,7 +325,7 @@ def main():
         model.train()
         losses = []
 
-        for x, lengths, y in tqdm(train_loader, desc=f"Epoch {epoch}/{EPOCHS}"):
+        for x, lengths, y, _ in tqdm(train_loader, desc=f"Epoch {epoch}/{EPOCHS}"):
             x = x.to(device)
             lengths = lengths.to(device)
             y = y.to(device)
@@ -299,10 +355,31 @@ def main():
     if best_state is not None:
         model.load_state_dict(best_state)
 
+    val_roc, val_pr = evaluate(model, val_loader, device)
     test_roc, test_pr = evaluate(model, test_loader, device)
+
     print("\nFINAL RESULTS")
+    print("VAL ROC-AUC :", val_roc)
+    print("VAL PR-AUC  :", val_pr)
     print("TEST ROC-AUC:", test_roc)
     print("TEST PR-AUC :", test_pr)
+
+    print("\nSaving LSTM prediction files...")
+
+    val_pred_df = collect_predictions(model, val_loader, device)
+    test_pred_df = collect_predictions(model, test_loader, device)
+
+    save_dir = "data/in-hospital-mortality-cleaned/cache_lstm_predictions"
+    os.makedirs(save_dir, exist_ok=True)
+
+    val_path = os.path.join(save_dir, f"lstm_val_predictions_seed{SEED}.csv")
+    test_path = os.path.join(save_dir, f"lstm_test_predictions_seed{SEED}.csv")
+
+    val_pred_df.to_csv(val_path, index=False)
+    test_pred_df.to_csv(test_path, index=False)
+
+    print("Saved val predictions to:", val_path)
+    print("Saved test predictions to:", test_path)
 
 
 if __name__ == "__main__":
