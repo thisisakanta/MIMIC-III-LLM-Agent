@@ -1,0 +1,2 @@
+window,grud_weight,xgb_weight,val_roc,val_pr,test_roc,test_pr
+last24h,0.8,0.2,0.8682411072400008,0.579799481951611,0.8644454160547389,0.5225933574857733

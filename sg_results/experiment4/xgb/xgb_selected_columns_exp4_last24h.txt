@@ -1,0 +1,119 @@
+Capillary refill rate_last50_mean
+Capillary refill rate_last50_std
+Capillary refill rate_last50_min
+Capillary refill rate_last50_max
+Capillary refill rate_last50_skew
+Capillary refill rate_last50_count
+Capillary refill rate_last50_missing
+Diastolic blood pressure_last50_mean
+Diastolic blood pressure_last50_std
+Diastolic blood pressure_last50_min
+Diastolic blood pressure_last50_max
+Diastolic blood pressure_last50_skew
+Diastolic blood pressure_last50_count
+Diastolic blood pressure_last50_missing
+Fraction inspired oxygen_last50_mean
+Fraction inspired oxygen_last50_std
+Fraction inspired oxygen_last50_min
+Fraction inspired oxygen_last50_max
+Fraction inspired oxygen_last50_skew
+Fraction inspired oxygen_last50_count
+Fraction inspired oxygen_last50_missing
+Glascow coma scale eye opening_last50_mean
+Glascow coma scale eye opening_last50_std
+Glascow coma scale eye opening_last50_min
+Glascow coma scale eye opening_last50_max
+Glascow coma scale eye opening_last50_skew
+Glascow coma scale eye opening_last50_count
+Glascow coma scale eye opening_last50_missing
+Glascow coma scale motor response_last50_mean
+Glascow coma scale motor response_last50_std
+Glascow coma scale motor response_last50_min
+Glascow coma scale motor response_last50_max
+Glascow coma scale motor response_last50_skew
+Glascow coma scale motor response_last50_count
+Glascow coma scale motor response_last50_missing
+Glascow coma scale total_last50_mean
+Glascow coma scale total_last50_std
+Glascow coma scale total_last50_min
+Glascow coma scale total_last50_max
+Glascow coma scale total_last50_skew
+Glascow coma scale total_last50_count
+Glascow coma scale total_last50_missing
+Glascow coma scale verbal response_last50_mean
+Glascow coma scale verbal response_last50_std
+Glascow coma scale verbal response_last50_min
+Glascow coma scale verbal response_last50_max
+Glascow coma scale verbal response_last50_skew
+Glascow coma scale verbal response_last50_count
+Glascow coma scale verbal response_last50_missing
+Glucose_last50_mean
+Glucose_last50_std
+Glucose_last50_min
+Glucose_last50_max
+Glucose_last50_skew
+Glucose_last50_count
+Glucose_last50_missing
+Heart Rate_last50_mean
+Heart Rate_last50_std
+Heart Rate_last50_min
+Heart Rate_last50_max
+Heart Rate_last50_skew
+Heart Rate_last50_count
+Heart Rate_last50_missing
+Height_last50_mean
+Height_last50_std
+Height_last50_min
+Height_last50_max
+Height_last50_skew
+Height_last50_count
+Height_last50_missing
+Mean blood pressure_last50_mean
+Mean blood pressure_last50_std
+Mean blood pressure_last50_min
+Mean blood pressure_last50_max
+Mean blood pressure_last50_skew
+Mean blood pressure_last50_count
+Mean blood pressure_last50_missing
+Oxygen saturation_last50_mean
+Oxygen saturation_last50_std
+Oxygen saturation_last50_min
+Oxygen saturation_last50_max
+Oxygen saturation_last50_skew
+Oxygen saturation_last50_count
+Oxygen saturation_last50_missing
+Respiratory rate_last50_mean
+Respiratory rate_last50_std
+Respiratory rate_last50_min
+Respiratory rate_last50_max
+Respiratory rate_last50_skew
+Respiratory rate_last50_count
+Respiratory rate_last50_missing
+Systolic blood pressure_last50_mean
+Systolic blood pressure_last50_std
+Systolic blood pressure_last50_min
+Systolic blood pressure_last50_max
+Systolic blood pressure_last50_skew
+Systolic blood pressure_last50_count
+Systolic blood pressure_last50_missing
+Temperature_last50_mean
+Temperature_last50_std
+Temperature_last50_min
+Temperature_last50_max
+Temperature_last50_skew
+Temperature_last50_count
+Temperature_last50_missing
+Weight_last50_mean
+Weight_last50_std
+Weight_last50_min
+Weight_last50_max
+Weight_last50_skew
+Weight_last50_count
+Weight_last50_missing
+pH_last50_mean
+pH_last50_std
+pH_last50_min
+pH_last50_max
+pH_last50_skew
+pH_last50_count
+pH_last50_missing
