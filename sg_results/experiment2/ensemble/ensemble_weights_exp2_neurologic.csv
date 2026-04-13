@@ -1,0 +1,2 @@
+subset,grud_weight,xgb_weight,val_roc,val_pr,test_roc,test_pr
+neurologic,0.35,0.65,0.8007262722524813,0.4354403285636666,0.8134190592570172,0.37331230632275764

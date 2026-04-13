@@ -1,0 +1,196 @@
+Glascow coma scale eye opening_full_mean
+Glascow coma scale eye opening_full_std
+Glascow coma scale eye opening_full_min
+Glascow coma scale eye opening_full_max
+Glascow coma scale eye opening_full_skew
+Glascow coma scale eye opening_full_count
+Glascow coma scale eye opening_full_missing
+Glascow coma scale eye opening_first10_mean
+Glascow coma scale eye opening_first10_std
+Glascow coma scale eye opening_first10_min
+Glascow coma scale eye opening_first10_max
+Glascow coma scale eye opening_first10_skew
+Glascow coma scale eye opening_first10_count
+Glascow coma scale eye opening_first10_missing
+Glascow coma scale eye opening_first25_mean
+Glascow coma scale eye opening_first25_std
+Glascow coma scale eye opening_first25_min
+Glascow coma scale eye opening_first25_max
+Glascow coma scale eye opening_first25_skew
+Glascow coma scale eye opening_first25_count
+Glascow coma scale eye opening_first25_missing
+Glascow coma scale eye opening_first50_mean
+Glascow coma scale eye opening_first50_std
+Glascow coma scale eye opening_first50_min
+Glascow coma scale eye opening_first50_max
+Glascow coma scale eye opening_first50_skew
+Glascow coma scale eye opening_first50_count
+Glascow coma scale eye opening_first50_missing
+Glascow coma scale eye opening_last50_mean
+Glascow coma scale eye opening_last50_std
+Glascow coma scale eye opening_last50_min
+Glascow coma scale eye opening_last50_max
+Glascow coma scale eye opening_last50_skew
+Glascow coma scale eye opening_last50_count
+Glascow coma scale eye opening_last50_missing
+Glascow coma scale eye opening_last25_mean
+Glascow coma scale eye opening_last25_std
+Glascow coma scale eye opening_last25_min
+Glascow coma scale eye opening_last25_max
+Glascow coma scale eye opening_last25_skew
+Glascow coma scale eye opening_last25_count
+Glascow coma scale eye opening_last25_missing
+Glascow coma scale eye opening_last10_mean
+Glascow coma scale eye opening_last10_std
+Glascow coma scale eye opening_last10_min
+Glascow coma scale eye opening_last10_max
+Glascow coma scale eye opening_last10_skew
+Glascow coma scale eye opening_last10_count
+Glascow coma scale eye opening_last10_missing
+Glascow coma scale motor response_full_mean
+Glascow coma scale motor response_full_std
+Glascow coma scale motor response_full_min
+Glascow coma scale motor response_full_max
+Glascow coma scale motor response_full_skew
+Glascow coma scale motor response_full_count
+Glascow coma scale motor response_full_missing
+Glascow coma scale motor response_first10_mean
+Glascow coma scale motor response_first10_std
+Glascow coma scale motor response_first10_min
+Glascow coma scale motor response_first10_max
+Glascow coma scale motor response_first10_skew
+Glascow coma scale motor response_first10_count
+Glascow coma scale motor response_first10_missing
+Glascow coma scale motor response_first25_mean
+Glascow coma scale motor response_first25_std
+Glascow coma scale motor response_first25_min
+Glascow coma scale motor response_first25_max
+Glascow coma scale motor response_first25_skew
+Glascow coma scale motor response_first25_count
+Glascow coma scale motor response_first25_missing
+Glascow coma scale motor response_first50_mean
+Glascow coma scale motor response_first50_std
+Glascow coma scale motor response_first50_min
+Glascow coma scale motor response_first50_max
+Glascow coma scale motor response_first50_skew
+Glascow coma scale motor response_first50_count
+Glascow coma scale motor response_first50_missing
+Glascow coma scale motor response_last50_mean
+Glascow coma scale motor response_last50_std
+Glascow coma scale motor response_last50_min
+Glascow coma scale motor response_last50_max
+Glascow coma scale motor response_last50_skew
+Glascow coma scale motor response_last50_count
+Glascow coma scale motor response_last50_missing
+Glascow coma scale motor response_last25_mean
+Glascow coma scale motor response_last25_std
+Glascow coma scale motor response_last25_min
+Glascow coma scale motor response_last25_max
+Glascow coma scale motor response_last25_skew
+Glascow coma scale motor response_last25_count
+Glascow coma scale motor response_last25_missing
+Glascow coma scale motor response_last10_mean
+Glascow coma scale motor response_last10_std
+Glascow coma scale motor response_last10_min
+Glascow coma scale motor response_last10_max
+Glascow coma scale motor response_last10_skew
+Glascow coma scale motor response_last10_count
+Glascow coma scale motor response_last10_missing
+Glascow coma scale total_full_mean
+Glascow coma scale total_full_std
+Glascow coma scale total_full_min
+Glascow coma scale total_full_max
+Glascow coma scale total_full_skew
+Glascow coma scale total_full_count
+Glascow coma scale total_full_missing
+Glascow coma scale total_first10_mean
+Glascow coma scale total_first10_std
+Glascow coma scale total_first10_min
+Glascow coma scale total_first10_max
+Glascow coma scale total_first10_skew
+Glascow coma scale total_first10_count
+Glascow coma scale total_first10_missing
+Glascow coma scale total_first25_mean
+Glascow coma scale total_first25_std
+Glascow coma scale total_first25_min
+Glascow coma scale total_first25_max
+Glascow coma scale total_first25_skew
+Glascow coma scale total_first25_count
+Glascow coma scale total_first25_missing
+Glascow coma scale total_first50_mean
+Glascow coma scale total_first50_std
+Glascow coma scale total_first50_min
+Glascow coma scale total_first50_max
+Glascow coma scale total_first50_skew
+Glascow coma scale total_first50_count
+Glascow coma scale total_first50_missing
+Glascow coma scale total_last50_mean
+Glascow coma scale total_last50_std
+Glascow coma scale total_last50_min
+Glascow coma scale total_last50_max
+Glascow coma scale total_last50_skew
+Glascow coma scale total_last50_count
+Glascow coma scale total_last50_missing
+Glascow coma scale total_last25_mean
+Glascow coma scale total_last25_std
+Glascow coma scale total_last25_min
+Glascow coma scale total_last25_max
+Glascow coma scale total_last25_skew
+Glascow coma scale total_last25_count
+Glascow coma scale total_last25_missing
+Glascow coma scale total_last10_mean
+Glascow coma scale total_last10_std
+Glascow coma scale total_last10_min
+Glascow coma scale total_last10_max
+Glascow coma scale total_last10_skew
+Glascow coma scale total_last10_count
+Glascow coma scale total_last10_missing
+Glascow coma scale verbal response_full_mean
+Glascow coma scale verbal response_full_std
+Glascow coma scale verbal response_full_min
+Glascow coma scale verbal response_full_max
+Glascow coma scale verbal response_full_skew
+Glascow coma scale verbal response_full_count
+Glascow coma scale verbal response_full_missing
+Glascow coma scale verbal response_first10_mean
+Glascow coma scale verbal response_first10_std
+Glascow coma scale verbal response_first10_min
+Glascow coma scale verbal response_first10_max
+Glascow coma scale verbal response_first10_skew
+Glascow coma scale verbal response_first10_count
+Glascow coma scale verbal response_first10_missing
+Glascow coma scale verbal response_first25_mean
+Glascow coma scale verbal response_first25_std
+Glascow coma scale verbal response_first25_min
+Glascow coma scale verbal response_first25_max
+Glascow coma scale verbal response_first25_skew
+Glascow coma scale verbal response_first25_count
+Glascow coma scale verbal response_first25_missing
+Glascow coma scale verbal response_first50_mean
+Glascow coma scale verbal response_first50_std
+Glascow coma scale verbal response_first50_min
+Glascow coma scale verbal response_first50_max
+Glascow coma scale verbal response_first50_skew
+Glascow coma scale verbal response_first50_count
+Glascow coma scale verbal response_first50_missing
+Glascow coma scale verbal response_last50_mean
+Glascow coma scale verbal response_last50_std
+Glascow coma scale verbal response_last50_min
+Glascow coma scale verbal response_last50_max
+Glascow coma scale verbal response_last50_skew
+Glascow coma scale verbal response_last50_count
+Glascow coma scale verbal response_last50_missing
+Glascow coma scale verbal response_last25_mean
+Glascow coma scale verbal response_last25_std
+Glascow coma scale verbal response_last25_min
+Glascow coma scale verbal response_last25_max
+Glascow coma scale verbal response_last25_skew
+Glascow coma scale verbal response_last25_count
+Glascow coma scale verbal response_last25_missing
+Glascow coma scale verbal response_last10_mean
+Glascow coma scale verbal response_last10_std
+Glascow coma scale verbal response_last10_min
+Glascow coma scale verbal response_last10_max
+Glascow coma scale verbal response_last10_skew
+Glascow coma scale verbal response_last10_count
+Glascow coma scale verbal response_last10_missing

@@ -1,0 +1,2 @@
+subset,grud_weight,xgb_weight,val_roc,val_pr,test_roc,test_pr
+metabolic_general,0.5,0.5,0.7161857781700113,0.32973766484822464,0.7314226243194057,0.27261292739583903
