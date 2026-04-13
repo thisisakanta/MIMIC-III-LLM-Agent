@@ -1,0 +1,827 @@
+feature,importance
+Glascow coma scale verbal response_last50_mean,0.14885883
+Glascow coma scale motor response_last10_mean,0.13946538
+Glascow coma scale motor response_last25_mean,0.113771446
+Glascow coma scale verbal response_last10_min,0.11317251
+Glucose_first50_count,0.0999814
+Temperature_full_mean,0.09705538
+Glascow coma scale eye opening_last10_mean,0.07955105
+Glascow coma scale eye opening_last50_mean,0.07790662
+Glascow coma scale verbal response_last25_mean,0.07492114
+Temperature_last50_mean,0.07463399
+Glascow coma scale eye opening_last10_max,0.073627874
+Glascow coma scale motor response_last50_max,0.07258752
+Respiratory rate_first10_max,0.06392265
+Heart Rate_last10_mean,0.060437776
+Glascow coma scale motor response_last25_max,0.059792135
+Respiratory rate_full_mean,0.05849686
+Glascow coma scale verbal response_last25_max,0.056573484
+Respiratory rate_first10_mean,0.048243754
+Temperature_last50_min,0.044553358
+Oxygen saturation_last50_mean,0.044063557
+pH_last50_count,0.042903297
+Glascow coma scale motor response_last10_max,0.0427764
+Glascow coma scale eye opening_last25_min,0.04184727
+Glucose_last50_max,0.04062906
+Glucose_full_mean,0.039993305
+Respiratory rate_first25_mean,0.03661984
+Glucose_last50_mean,0.03584246
+Diastolic blood pressure_first10_min,0.034015495
+Systolic blood pressure_full_min,0.03350778
+Glucose_last50_min,0.028812932
+Temperature_full_min,0.027947105
+Systolic blood pressure_last25_min,0.027354456
+Glascow coma scale motor response_first50_std,0.02697323
+Temperature_first50_mean,0.026802864
+Respiratory rate_last25_mean,0.02497067
+Oxygen saturation_last25_std,0.02480261
+Glascow coma scale total_full_std,0.024677532
+Glascow coma scale eye opening_last10_min,0.024454337
+pH_full_mean,0.02409141
+Fraction inspired oxygen_last10_count,0.02391578
+Respiratory rate_full_max,0.02379596
+Diastolic blood pressure_last25_min,0.023648376
+pH_first25_mean,0.023549234
+Temperature_last25_min,0.022934653
+pH_last25_count,0.021977836
+Oxygen saturation_last50_std,0.021891296
+Temperature_last25_mean,0.02167183
+Diastolic blood pressure_full_mean,0.021648223
+Temperature_last10_skew,0.021644626
+Systolic blood pressure_last25_mean,0.021590441
+Glascow coma scale eye opening_last25_mean,0.021489492
+Glascow coma scale verbal response_last50_max,0.021175133
+Glucose_first25_count,0.020246292
+Diastolic blood pressure_last50_mean,0.019839875
+Respiratory rate_last50_mean,0.019674575
+Weight_last50_min,0.019454148
+Oxygen saturation_last25_mean,0.019126572
+Diastolic blood pressure_last25_mean,0.019018324
+Respiratory rate_full_count,0.01851481
+Heart Rate_last10_min,0.018243602
+Systolic blood pressure_full_mean,0.018234164
+Systolic blood pressure_last50_mean,0.01783593
+Glascow coma scale motor response_last50_mean,0.017420493
+Heart Rate_last50_mean,0.017325904
+Temperature_last50_max,0.016407782
+Diastolic blood pressure_last25_max,0.01635864
+Heart Rate_last10_std,0.016287563
+Diastolic blood pressure_last10_std,0.016155148
+Respiratory rate_last10_min,0.016098442
+Glascow coma scale motor response_full_max,0.015134498
+Diastolic blood pressure_first10_count,0.014663602
+Glascow coma scale motor response_last25_min,0.014457893
+Heart Rate_last25_std,0.014160496
+Mean blood pressure_full_mean,0.014050142
+Diastolic blood pressure_first50_mean,0.014008468
+Heart Rate_first10_skew,0.01388399
+Temperature_full_std,0.013724044
+Oxygen saturation_full_std,0.013720397
+Systolic blood pressure_last50_min,0.013199788
+Glascow coma scale total_first50_std,0.013072692
+Heart Rate_last50_max,0.012944883
+Glascow coma scale verbal response_last25_min,0.012619733
+Diastolic blood pressure_last10_mean,0.012296762
+Glucose_first25_mean,0.012254587
+Systolic blood pressure_first10_mean,0.01220379
+Respiratory rate_full_min,0.012044626
+Height_first25_count,0.011951885
+Diastolic blood pressure_first25_min,0.0119225895
+Glascow coma scale verbal response_last50_min,0.011920822
+Glascow coma scale eye opening_full_skew,0.0117617855
+Glascow coma scale motor response_full_count,0.011655396
+Heart Rate_last25_min,0.011453033
+Respiratory rate_full_std,0.0113407355
+Respiratory rate_last10_mean,0.010994541
+Glucose_first10_skew,0.010984172
+Glascow coma scale eye opening_last50_std,0.010794131
+Temperature_first50_max,0.01077116
+Diastolic blood pressure_first25_skew,0.010725849
+Respiratory rate_first50_count,0.010719583
+pH_last50_missing,0.010641271
+Temperature_first25_max,0.010479926
+Respiratory rate_first50_mean,0.010440622
+Systolic blood pressure_first10_min,0.010240258
+Oxygen saturation_last50_min,0.010046288
+Glascow coma scale eye opening_last50_min,0.00978314
+Glascow coma scale eye opening_last50_max,0.009770579
+pH_last50_max,0.009595863
+Diastolic blood pressure_full_max,0.009474617
+Respiratory rate_last25_skew,0.0094195735
+Glascow coma scale verbal response_last10_mean,0.009382816
+pH_last10_count,0.009331636
+Systolic blood pressure_last10_mean,0.009252931
+pH_last25_missing,0.009242589
+Glascow coma scale motor response_last10_count,0.009180871
+Respiratory rate_first25_max,0.009053588
+pH_first25_count,0.008975126
+Weight_full_mean,0.008951835
+Diastolic blood pressure_last10_max,0.00889609
+Respiratory rate_last10_max,0.0087496145
+Mean blood pressure_first10_count,0.008655527
+Glucose_last25_min,0.008577885
+Respiratory rate_first50_min,0.0085623115
+Glucose_last25_mean,0.008480927
+Glucose_first10_std,0.008476499
+Weight_full_max,0.00829242
+Heart Rate_last25_mean,0.0082820775
+Heart Rate_first25_skew,0.008277385
+Diastolic blood pressure_last10_skew,0.008256689
+Mean blood pressure_first10_min,0.008145497
+Respiratory rate_last50_std,0.008041681
+Heart Rate_full_max,0.007963607
+Diastolic blood pressure_last10_min,0.007917616
+Weight_first50_min,0.007771558
+Temperature_last10_max,0.0077510052
+Oxygen saturation_last25_min,0.0076636984
+Glascow coma scale total_last50_mean,0.0076614753
+Diastolic blood pressure_full_min,0.0076482603
+pH_full_min,0.0076049576
+Oxygen saturation_last10_mean,0.007551229
+Glucose_last50_count,0.0074074
+Heart Rate_last10_max,0.0073773228
+Oxygen saturation_full_mean,0.007321325
+Diastolic blood pressure_first50_min,0.007296139
+pH_last50_mean,0.00728612
+Glascow coma scale motor response_full_std,0.0070494637
+Glucose_last25_max,0.007033679
+Glascow coma scale eye opening_full_mean,0.0070295357
+Heart Rate_full_count,0.00695149
+Temperature_first25_mean,0.006882412
+Temperature_last10_count,0.0067888633
+Mean blood pressure_first10_skew,0.0067785545
+Temperature_last10_mean,0.006718749
+Oxygen saturation_first10_mean,0.0066548074
+Temperature_first50_std,0.006635701
+Glascow coma scale verbal response_full_mean,0.006408704
+pH_last50_min,0.0063839
+Diastolic blood pressure_first50_max,0.006349501
+Respiratory rate_last50_max,0.0062702512
+Temperature_last10_min,0.006233747
+Respiratory rate_last25_max,0.006185817
+Glucose_first50_mean,0.005630561
+Temperature_first50_min,0.0056248973
+Heart Rate_first50_skew,0.005576204
+Fraction inspired oxygen_last25_max,0.005570492
+Mean blood pressure_last25_mean,0.0055704517
+Fraction inspired oxygen_full_mean,0.005562995
+Mean blood pressure_last25_min,0.0053559933
+Respiratory rate_first25_std,0.005353198
+Weight_full_min,0.0053102775
+Temperature_last50_std,0.0052798293
+Systolic blood pressure_last50_skew,0.005272504
+Heart Rate_full_skew,0.005125258
+Systolic blood pressure_last10_min,0.0050692335
+Glascow coma scale motor response_first50_mean,0.005015344
+Diastolic blood pressure_full_skew,0.004953718
+Diastolic blood pressure_first10_max,0.0048743905
+Temperature_full_max,0.004871282
+Oxygen saturation_full_count,0.004846968
+Systolic blood pressure_first25_min,0.0048310626
+Mean blood pressure_first25_mean,0.0047919643
+Temperature_full_skew,0.0047694496
+pH_full_skew,0.004755499
+Diastolic blood pressure_last50_max,0.0047294837
+Oxygen saturation_first10_std,0.0047200713
+Mean blood pressure_last10_mean,0.0047030943
+Glascow coma scale total_full_mean,0.004672603
+Glucose_first25_skew,0.0046724156
+Fraction inspired oxygen_last25_count,0.004661243
+Diastolic blood pressure_last25_std,0.0046593607
+Heart Rate_full_std,0.004652991
+Glucose_first50_min,0.0045447317
+Respiratory rate_last50_skew,0.0045314636
+Glascow coma scale total_last50_count,0.0045245863
+Mean blood pressure_full_min,0.0044967458
+Heart Rate_last50_std,0.0044951984
+Temperature_first10_mean,0.004474197
+Glascow coma scale motor response_last50_count,0.0044632517
+Respiratory rate_full_skew,0.004453023
+Fraction inspired oxygen_last25_mean,0.004341421
+Respiratory rate_first50_skew,0.004325666
+Diastolic blood pressure_last50_std,0.004317811
+Systolic blood pressure_first50_max,0.004294725
+Glucose_first10_mean,0.004283117
+Weight_last50_mean,0.0042735436
+pH_last25_min,0.0042247353
+Weight_first50_max,0.004218456
+Glascow coma scale total_last25_max,0.0041614496
+Glascow coma scale total_last25_count,0.00414737
+Glascow coma scale total_first25_std,0.0041133263
+Oxygen saturation_last50_skew,0.0041044774
+pH_last10_mean,0.0040969225
+Heart Rate_first10_max,0.0040911185
+Mean blood pressure_first10_mean,0.0040899836
+Glucose_last25_std,0.0040823985
+Heart Rate_first25_max,0.0040671816
+Oxygen saturation_last25_skew,0.0040578297
+Fraction inspired oxygen_first50_mean,0.0039938902
+Glascow coma scale eye opening_last50_skew,0.0039391024
+Heart Rate_first10_count,0.0039314195
+Heart Rate_first50_min,0.003928459
+Glucose_last50_std,0.0039154957
+Oxygen saturation_full_min,0.0039123716
+Temperature_first10_max,0.003882569
+Mean blood pressure_last50_min,0.0037419542
+Systolic blood pressure_last25_max,0.0037404585
+pH_last25_mean,0.0037198924
+Systolic blood pressure_first50_min,0.0037190192
+Respiratory rate_last25_min,0.0036965145
+Heart Rate_full_min,0.0036711402
+Glucose_full_std,0.0036416461
+Heart Rate_last25_max,0.0036301815
+Systolic blood pressure_first25_mean,0.003593402
+Glascow coma scale total_last25_skew,0.0035758787
+Diastolic blood pressure_full_std,0.003544841
+pH_full_count,0.0035420181
+Glascow coma scale total_last25_mean,0.0035415625
+Diastolic blood pressure_first10_mean,0.003458543
+Heart Rate_last50_min,0.0034491196
+Glascow coma scale eye opening_full_min,0.0034148262
+Glascow coma scale motor response_full_mean,0.0034085442
+Height_first50_count,0.0034046615
+Heart Rate_first25_std,0.003396503
+Mean blood pressure_last10_skew,0.0033660433
+Diastolic blood pressure_first25_mean,0.0033579103
+pH_first10_std,0.0033512379
+Glascow coma scale verbal response_last50_skew,0.0033233725
+Oxygen saturation_first50_count,0.0033224695
+Respiratory rate_first25_min,0.0033111805
+Mean blood pressure_first25_skew,0.0032945855
+Height_first25_mean,0.003276491
+Respiratory rate_last10_std,0.0032700358
+Temperature_first10_skew,0.0032563498
+Glucose_full_max,0.0032107276
+Oxygen saturation_first10_count,0.0032102792
+Systolic blood pressure_last50_max,0.0031907377
+Glascow coma scale verbal response_full_std,0.003158004
+Mean blood pressure_last50_mean,0.0031568028
+pH_first50_mean,0.003116175
+Glascow coma scale eye opening_last10_count,0.0031050008
+Oxygen saturation_first25_skew,0.0031035463
+Heart Rate_full_mean,0.003098303
+Glascow coma scale eye opening_full_count,0.0030910787
+Oxygen saturation_first50_mean,0.003083788
+Glucose_first25_min,0.0030740506
+Glascow coma scale verbal response_first50_mean,0.0030411114
+Systolic blood pressure_full_std,0.0030400718
+Glucose_last50_skew,0.003024485
+Glascow coma scale verbal response_full_count,0.0029752557
+Heart Rate_first50_max,0.0029710247
+Respiratory rate_first25_skew,0.0029556984
+Systolic blood pressure_last10_max,0.0029448292
+Glucose_full_min,0.0029383397
+Fraction inspired oxygen_last25_min,0.0029237082
+Temperature_first10_min,0.0028969103
+Heart Rate_first25_min,0.002837535
+pH_last10_missing,0.002805689
+Heart Rate_first50_mean,0.002772602
+Oxygen saturation_first25_mean,0.0026876726
+Systolic blood pressure_full_max,0.002683732
+Temperature_last25_skew,0.0026674417
+pH_last10_min,0.002665261
+Weight_first50_std,0.0026577408
+Diastolic blood pressure_last50_skew,0.0026152548
+Oxygen saturation_last10_min,0.0025998447
+Glascow coma scale total_first50_skew,0.0025944042
+Height_first25_min,0.0025666284
+Oxygen saturation_first50_skew,0.0025550444
+Temperature_last10_std,0.0025303317
+Systolic blood pressure_first25_std,0.0025187323
+Glascow coma scale total_full_skew,0.002508966
+Respiratory rate_first50_max,0.0025069444
+Diastolic blood pressure_last25_skew,0.0024915384
+Glascow coma scale total_last10_max,0.00245109
+Oxygen saturation_full_skew,0.0024494608
+Mean blood pressure_first10_std,0.0024273803
+Diastolic blood pressure_first50_skew,0.0024235507
+Diastolic blood pressure_first50_std,0.0024016784
+Temperature_first25_std,0.002363937
+Mean blood pressure_first50_mean,0.0023403543
+Fraction inspired oxygen_last50_count,0.00232791
+Oxygen saturation_first50_std,0.002316596
+Heart Rate_first10_std,0.0023157354
+pH_first50_std,0.0023141354
+Glascow coma scale eye opening_first50_skew,0.0023086604
+Systolic blood pressure_first25_max,0.0023028993
+Temperature_last25_std,0.0022985048
+Glascow coma scale total_last50_skew,0.0022426036
+Glascow coma scale motor response_first10_mean,0.0021985755
+Glascow coma scale eye opening_first50_min,0.0021907631
+Weight_first50_mean,0.0021879538
+Glascow coma scale motor response_first50_min,0.0021869757
+pH_first25_min,0.0021532343
+Systolic blood pressure_first10_skew,0.0021443907
+Heart Rate_last25_skew,0.0021241326
+Systolic blood pressure_first25_skew,0.0021191938
+Respiratory rate_last25_std,0.0021168196
+Mean blood pressure_first50_min,0.0021053646
+Weight_full_count,0.0020693943
+Respiratory rate_last10_skew,0.002067126
+Fraction inspired oxygen_last10_max,0.0020667608
+Glascow coma scale total_last50_max,0.0020535917
+Glucose_full_count,0.0020534606
+Glascow coma scale total_first10_count,0.0020390928
+Glucose_first50_std,0.0020345575
+Mean blood pressure_full_std,0.002008084
+Glascow coma scale motor response_full_skew,0.0019890913
+Mean blood pressure_last50_max,0.001978303
+Heart Rate_last50_skew,0.001977677
+Mean blood pressure_last25_max,0.0019771582
+Glascow coma scale eye opening_first50_std,0.0019675524
+Respiratory rate_first50_std,0.0019491052
+Heart Rate_first10_min,0.0019386323
+Systolic blood pressure_first50_std,0.0019331975
+pH_first10_min,0.0018908118
+Oxygen saturation_first10_skew,0.0018827171
+Glascow coma scale eye opening_first50_mean,0.0018813388
+Mean blood pressure_full_skew,0.0018468146
+Glascow coma scale total_last25_min,0.0018439589
+Glucose_last50_missing,0.0018341459
+Heart Rate_first10_mean,0.0018306172
+pH_first50_max,0.0018264584
+Respiratory rate_first10_std,0.0018082553
+Systolic blood pressure_last10_skew,0.0017910853
+Glascow coma scale motor response_first50_max,0.0017398263
+Mean blood pressure_last25_skew,0.0017330636
+Diastolic blood pressure_full_count,0.0017324288
+Glascow coma scale total_first50_mean,0.0017306033
+Temperature_first50_skew,0.0017267007
+pH_first25_max,0.0017237692
+Glascow coma scale eye opening_last25_count,0.0017200013
+Glascow coma scale verbal response_full_max,0.0017109986
+Systolic blood pressure_full_skew,0.0016871426
+pH_last10_max,0.0016865707
+Glascow coma scale motor response_last10_std,0.0016779844
+Glucose_first10_max,0.0016680375
+Glucose_first50_skew,0.0016458967
+Mean blood pressure_last50_std,0.0016316692
+Temperature_last25_max,0.0016216694
+Glascow coma scale verbal response_first50_count,0.001620443
+Glascow coma scale eye opening_last25_std,0.0016144803
+Glucose_first10_min,0.0016138275
+Capillary refill rate_first50_count,0.0015893948
+pH_first50_min,0.001585316
+Weight_full_std,0.0015844649
+Temperature_last50_count,0.0015641429
+Temperature_first25_count,0.0015619823
+Glascow coma scale eye opening_last25_skew,0.0015515704
+Diastolic blood pressure_last50_min,0.0015453337
+Height_first10_count,0.0015219229
+Respiratory rate_first10_count,0.0015136413
+Glascow coma scale total_last10_mean,0.0015136105
+Mean blood pressure_first50_std,0.0014987541
+Oxygen saturation_last25_max,0.0014963404
+Glascow coma scale verbal response_full_skew,0.0014645671
+Systolic blood pressure_first10_count,0.0014406169
+pH_full_max,0.0013958187
+Glascow coma scale verbal response_last25_std,0.0013907432
+Systolic blood pressure_first10_std,0.0013741408
+Oxygen saturation_last10_std,0.001364205
+Glucose_first25_std,0.0013569633
+Heart Rate_first50_std,0.0013555894
+Glucose_first25_max,0.0013544332
+Fraction inspired oxygen_first10_skew,0.0013482615
+Glascow coma scale eye opening_last50_count,0.0013465487
+Oxygen saturation_first25_std,0.001344822
+Glascow coma scale total_last25_std,0.0013361548
+Diastolic blood pressure_first25_std,0.0013316742
+Mean blood pressure_last10_std,0.001329076
+Heart Rate_first25_mean,0.0013207091
+Weight_last10_max,0.0013202012
+Heart Rate_last10_skew,0.001319796
+Glucose_full_skew,0.0013197388
+Oxygen saturation_last10_max,0.0013103905
+Temperature_first25_skew,0.001306397
+Glascow coma scale total_full_min,0.00128752
+Glucose_last25_count,0.0012437478
+Systolic blood pressure_first50_skew,0.0012387371
+Glascow coma scale verbal response_last50_std,0.0012219766
+Glucose_last10_max,0.0012176692
+Glucose_last10_mean,0.001209247
+pH_last50_std,0.0012055159
+pH_full_std,0.0012030513
+Mean blood pressure_first50_skew,0.0011941621
+Weight_last50_max,0.0011680229
+Mean blood pressure_last10_max,0.0011568036
+Diastolic blood pressure_first50_count,0.0011496145
+Weight_first50_skew,0.0011310895
+Fraction inspired oxygen_first50_std,0.0011298103
+Heart Rate_first25_count,0.001128197
+Glascow coma scale total_last10_min,0.0011205258
+Fraction inspired oxygen_last50_max,0.0011177228
+Systolic blood pressure_last25_std,0.0011161448
+Respiratory rate_first10_min,0.0011159128
+Oxygen saturation_last10_skew,0.0011104819
+Weight_last25_mean,0.0011089024
+Mean blood pressure_first25_std,0.0010993312
+Height_full_mean,0.0010936925
+Systolic blood pressure_first50_mean,0.0010863715
+Temperature_first25_min,0.0010734017
+Temperature_first10_std,0.0010687636
+Systolic blood pressure_last25_skew,0.0010633579
+Glascow coma scale eye opening_full_max,0.0010456125
+Mean blood pressure_full_max,0.0010446255
+Diastolic blood pressure_first10_skew,0.0010063733
+Mean blood pressure_first50_count,0.0009908736
+Oxygen saturation_first50_min,0.0009880956
+pH_first25_skew,0.0009835353
+Height_first10_mean,0.0009554894
+Heart Rate_last25_count,0.0009492266
+Height_first10_min,0.0009481112
+Mean blood pressure_first25_count,0.0009445038
+Glascow coma scale total_first10_min,0.00092962396
+Glascow coma scale eye opening_last10_skew,0.00091082783
+Systolic blood pressure_first10_max,0.0009059468
+Fraction inspired oxygen_first10_max,0.0008977708
+Systolic blood pressure_last10_std,0.00087727595
+Fraction inspired oxygen_last50_mean,0.0008703534
+Systolic blood pressure_last50_std,0.0008607282
+Oxygen saturation_first10_max,0.0008558878
+Glascow coma scale verbal response_first25_std,0.00083373126
+Glascow coma scale eye opening_first25_skew,0.00081577385
+Mean blood pressure_first10_max,0.00080643303
+Diastolic blood pressure_first25_max,0.00080434175
+Glascow coma scale total_last10_std,0.00080399716
+Glascow coma scale eye opening_last10_std,0.0008036536
+Heart Rate_first50_count,0.0007986889
+pH_first25_std,0.00079518824
+Glascow coma scale total_last50_min,0.00078796205
+pH_last10_std,0.0007634921
+Temperature_last50_skew,0.0007626082
+Glascow coma scale total_first10_mean,0.0007229076
+Glascow coma scale motor response_full_min,0.0007166027
+pH_last25_max,0.0007137252
+Weight_first25_min,0.000712671
+Glucose_last10_std,0.0006828
+Respiratory rate_last50_min,0.00067769445
+Weight_full_skew,0.0006620125
+Respiratory rate_first10_skew,0.00065841177
+Weight_last25_min,0.00065182167
+Glascow coma scale eye opening_full_std,0.0006465299
+Glascow coma scale motor response_last50_missing,0.0006461754
+Respiratory rate_first25_count,0.0006435764
+Mean blood pressure_full_count,0.0006404197
+Weight_last50_count,0.00062574365
+Fraction inspired oxygen_last50_std,0.00062512426
+Glascow coma scale eye opening_first50_count,0.00062373985
+Fraction inspired oxygen_last10_std,0.00061860535
+Diastolic blood pressure_first10_std,0.0006023382
+Glascow coma scale verbal response_first10_mean,0.00059352594
+Weight_last25_std,0.00059335737
+Temperature_full_count,0.00059249974
+Glascow coma scale motor response_first25_skew,0.0005734129
+Glascow coma scale motor response_first25_mean,0.0005663078
+Glascow coma scale verbal response_first25_mean,0.0005603498
+Glucose_last25_skew,0.0005595454
+Diastolic blood pressure_first25_count,0.00055333786
+Glascow coma scale motor response_first25_std,0.0005501177
+Glascow coma scale motor response_last50_min,0.0005451881
+Glucose_last10_min,0.000542138
+Mean blood pressure_last10_min,0.00053606095
+Glascow coma scale motor response_last50_skew,0.0005331
+Weight_last25_count,0.0005231722
+Glascow coma scale motor response_last10_min,0.0005029024
+Weight_first25_count,0.00050227065
+Fraction inspired oxygen_first25_skew,0.00050026306
+Mean blood pressure_first25_min,0.0004958372
+Fraction inspired oxygen_first25_min,0.00049367215
+Height_first25_missing,0.0004886248
+Mean blood pressure_last50_skew,0.00048775965
+Glascow coma scale verbal response_first25_count,0.00048564273
+Fraction inspired oxygen_full_skew,0.00048350496
+Glascow coma scale motor response_first50_skew,0.00047352302
+Glascow coma scale verbal response_first25_max,0.0004717584
+Glascow coma scale verbal response_first50_std,0.0004699541
+Fraction inspired oxygen_first25_count,0.00046176187
+Heart Rate_last50_count,0.00045841944
+Mean blood pressure_last25_std,0.00045140597
+Fraction inspired oxygen_last10_mean,0.00045120754
+Systolic blood pressure_first25_count,0.00044542138
+Weight_last50_std,0.00044450842
+Glascow coma scale eye opening_first25_std,0.00044172845
+Diastolic blood pressure_full_missing,0.000435758
+Fraction inspired oxygen_full_min,0.00043550337
+Glascow coma scale total_first25_count,0.0004332568
+Glucose_first50_max,0.00043179822
+Glascow coma scale total_first10_skew,0.00042419153
+pH_first50_count,0.0004221773
+Glucose_last10_count,0.0004180207
+Fraction inspired oxygen_full_std,0.00038451
+Oxygen saturation_full_max,0.00037504613
+Respiratory rate_last50_count,0.00037280697
+Temperature_first10_count,0.0003681748
+Weight_last10_mean,0.00036797737
+Mean blood pressure_first25_max,0.00036586102
+Glascow coma scale total_first10_std,0.00036313324
+Glascow coma scale motor response_first50_count,0.00035429126
+Fraction inspired oxygen_full_count,0.00035358962
+Height_first10_missing,0.00035224657
+Capillary refill rate_first10_count,0.00035169406
+Glucose_last10_skew,0.00035125972
+Glascow coma scale eye opening_first10_std,0.0003474894
+Capillary refill rate_first10_std,0.0003438315
+Oxygen saturation_last50_count,0.00033451026
+Glascow coma scale eye opening_last25_max,0.00033109987
+Fraction inspired oxygen_first25_mean,0.00032760322
+Glascow coma scale motor response_first10_std,0.00031746214
+Glascow coma scale total_first25_mean,0.0003080484
+pH_last25_skew,0.0003078945
+Fraction inspired oxygen_last50_min,0.00029443187
+Mean blood pressure_first50_max,0.0002921479
+Glascow coma scale motor response_first10_min,0.00028712692
+Glascow coma scale eye opening_first25_count,0.00028315146
+Oxygen saturation_first50_max,0.00027178225
+Temperature_first50_count,0.00026523258
+Glascow coma scale motor response_first25_count,0.0002545868
+pH_first10_mean,0.00025364888
+Glascow coma scale eye opening_first50_max,0.00024672237
+Glascow coma scale verbal response_last50_count,0.00024606395
+pH_first50_skew,0.00024543717
+Glascow coma scale motor response_last25_count,0.00023921764
+Fraction inspired oxygen_first10_min,0.00023600011
+Oxygen saturation_first25_min,0.0002317531
+Fraction inspired oxygen_last25_std,0.000227999
+pH_last50_skew,0.00022518172
+Capillary refill rate_last25_count,0.00022141323
+Glascow coma scale verbal response_last10_std,0.00022047965
+Glascow coma scale motor response_full_missing,0.00021977957
+Glucose_first10_count,0.00021797448
+Capillary refill rate_full_mean,0.00020897888
+Weight_last10_count,0.00020685242
+Weight_first10_max,0.00020476988
+Glascow coma scale eye opening_first10_mean,0.00018808695
+Fraction inspired oxygen_last50_skew,0.00017841937
+Glascow coma scale verbal response_last10_count,0.00017715001
+pH_first10_max,0.00017045402
+Glascow coma scale verbal response_first25_skew,0.00016100932
+pH_last10_skew,0.00015449665
+Glascow coma scale motor response_last25_skew,0.00015441266
+pH_first10_count,0.00015394075
+Glascow coma scale motor response_last25_std,0.00015047821
+Glascow coma scale verbal response_last25_skew,0.00014765629
+Weight_first50_count,0.00014639387
+pH_first10_skew,0.00013345016
+pH_last25_std,0.00012854558
+Capillary refill rate_full_max,0.00012412798
+Weight_first25_max,0.00012404658
+Oxygen saturation_first10_min,0.00012357777
+Weight_last25_max,0.0001231
+Glascow coma scale eye opening_first25_max,0.00011673705
+Oxygen saturation_last50_max,0.00011520894
+Fraction inspired oxygen_first50_skew,0.00011329193
+Glascow coma scale verbal response_first10_max,0.0001005108
+Glascow coma scale total_last10_skew,9.874111e-05
+Glascow coma scale verbal response_first10_std,8.577153e-05
+Glascow coma scale total_last50_std,8.403878e-05
+Fraction inspired oxygen_first10_std,8.255995e-05
+Weight_first10_mean,6.981767e-05
+Height_full_count,6.6271066e-05
+Height_first50_mean,6.49848e-05
+Fraction inspired oxygen_first25_std,5.456377e-05
+Glascow coma scale total_first25_skew,5.284621e-05
+Capillary refill rate_last50_mean,5.0544422e-05
+Capillary refill rate_full_std,4.8783248e-05
+Glascow coma scale motor response_last50_std,4.0057035e-05
+Glascow coma scale motor response_last10_skew,2.5160518e-05
+Capillary refill rate_first25_min,0.0
+Capillary refill rate_first25_count,0.0
+Capillary refill rate_first25_missing,0.0
+Capillary refill rate_first50_mean,0.0
+Capillary refill rate_first50_std,0.0
+Capillary refill rate_first50_min,0.0
+Capillary refill rate_first50_max,0.0
+Capillary refill rate_first50_skew,0.0
+Capillary refill rate_first50_missing,0.0
+Capillary refill rate_last50_std,0.0
+Capillary refill rate_last50_min,0.0
+Capillary refill rate_last50_max,0.0
+Capillary refill rate_last50_skew,0.0
+Capillary refill rate_last50_count,0.0
+Capillary refill rate_last50_missing,0.0
+Capillary refill rate_first25_max,0.0
+Capillary refill rate_first25_skew,0.0
+Capillary refill rate_last25_min,0.0
+Capillary refill rate_last25_max,0.0
+Capillary refill rate_last25_skew,0.0
+Capillary refill rate_last25_missing,0.0
+Capillary refill rate_last10_mean,0.0
+Capillary refill rate_last10_std,0.0
+Capillary refill rate_last10_min,0.0
+Capillary refill rate_last10_max,0.0
+Capillary refill rate_last10_skew,0.0
+Capillary refill rate_last10_count,0.0
+pH_first10_missing,0.0
+pH_first25_missing,0.0
+pH_first50_missing,0.0
+Capillary refill rate_first25_std,0.0
+Oxygen saturation_last50_missing,0.0
+Oxygen saturation_last25_count,0.0
+Oxygen saturation_last25_missing,0.0
+Oxygen saturation_last10_count,0.0
+Oxygen saturation_last10_missing,0.0
+Respiratory rate_full_missing,0.0
+Mean blood pressure_last10_count,0.0
+Mean blood pressure_last10_missing,0.0
+Oxygen saturation_full_missing,0.0
+Oxygen saturation_first10_missing,0.0
+Oxygen saturation_first25_max,0.0
+Oxygen saturation_first25_count,0.0
+Oxygen saturation_first25_missing,0.0
+Oxygen saturation_first50_missing,0.0
+Mean blood pressure_first10_missing,0.0
+Mean blood pressure_first25_missing,0.0
+Capillary refill rate_last25_mean,0.0
+Capillary refill rate_last25_std,0.0
+Mean blood pressure_last50_missing,0.0
+Mean blood pressure_last25_count,0.0
+Mean blood pressure_last25_missing,0.0
+Respiratory rate_first10_missing,0.0
+Respiratory rate_first25_missing,0.0
+Respiratory rate_first50_missing,0.0
+Respiratory rate_last50_missing,0.0
+Respiratory rate_last25_count,0.0
+Respiratory rate_last25_missing,0.0
+Height_first50_missing,0.0
+Height_last50_mean,0.0
+Height_last50_std,0.0
+Height_last50_min,0.0
+Height_last50_max,0.0
+Height_last50_count,0.0
+Height_last50_missing,0.0
+Height_last25_mean,0.0
+Height_last25_std,0.0
+Height_last25_min,0.0
+Height_last25_max,0.0
+Height_last25_count,0.0
+Height_last25_missing,0.0
+Height_last10_mean,0.0
+Height_last10_std,0.0
+Height_last10_min,0.0
+Height_last10_max,0.0
+Height_last10_count,0.0
+Height_last10_missing,0.0
+Mean blood pressure_full_missing,0.0
+Heart Rate_last25_missing,0.0
+Heart Rate_last10_count,0.0
+Heart Rate_last10_missing,0.0
+Height_full_std,0.0
+Height_full_min,0.0
+Height_full_max,0.0
+Height_full_missing,0.0
+Height_first10_std,0.0
+Height_first10_max,0.0
+Height_first25_std,0.0
+Height_first25_max,0.0
+Height_first50_std,0.0
+Height_first50_min,0.0
+Height_first50_max,0.0
+Heart Rate_first10_missing,0.0
+Heart Rate_first25_missing,0.0
+Heart Rate_first50_missing,0.0
+Heart Rate_last50_missing,0.0
+Respiratory rate_last10_count,0.0
+Respiratory rate_last10_missing,0.0
+Systolic blood pressure_full_count,0.0
+Systolic blood pressure_full_missing,0.0
+Systolic blood pressure_first10_missing,0.0
+Systolic blood pressure_first25_missing,0.0
+Glucose_first50_missing,0.0
+Glucose_last25_missing,0.0
+Glucose_last10_missing,0.0
+Heart Rate_full_missing,0.0
+Glascow coma scale verbal response_last10_max,0.0
+Glascow coma scale verbal response_last10_skew,0.0
+Glascow coma scale verbal response_last10_missing,0.0
+Glucose_full_missing,0.0
+Glucose_first10_missing,0.0
+Mean blood pressure_first50_missing,0.0
+Mean blood pressure_last50_count,0.0
+Glascow coma scale verbal response_first10_skew,0.0
+Glucose_first25_missing,0.0
+Glascow coma scale verbal response_first25_min,0.0
+Glascow coma scale verbal response_first10_count,0.0
+Glascow coma scale verbal response_first50_min,0.0
+Glascow coma scale verbal response_first50_max,0.0
+Glascow coma scale verbal response_first50_skew,0.0
+Glascow coma scale verbal response_first10_missing,0.0
+Glascow coma scale verbal response_last50_missing,0.0
+Glascow coma scale verbal response_last25_count,0.0
+Glascow coma scale verbal response_last25_missing,0.0
+Systolic blood pressure_first50_count,0.0
+Systolic blood pressure_first50_missing,0.0
+Systolic blood pressure_last50_count,0.0
+Systolic blood pressure_last50_missing,0.0
+Glascow coma scale verbal response_first25_missing,0.0
+Systolic blood pressure_last25_count,0.0
+Systolic blood pressure_last25_missing,0.0
+Systolic blood pressure_last10_missing,0.0
+Systolic blood pressure_last10_count,0.0
+Glascow coma scale total_first50_missing,0.0
+Glascow coma scale total_last50_missing,0.0
+Glascow coma scale total_last25_missing,0.0
+Temperature_full_missing,0.0
+Glascow coma scale total_last10_count,0.0
+Glascow coma scale total_last10_missing,0.0
+Glascow coma scale verbal response_full_missing,0.0
+Glascow coma scale verbal response_full_min,0.0
+Glascow coma scale verbal response_first10_min,0.0
+Glascow coma scale motor response_last10_missing,0.0
+Glascow coma scale total_full_max,0.0
+Glascow coma scale verbal response_first50_missing,0.0
+Glascow coma scale total_full_count,0.0
+Glascow coma scale total_full_missing,0.0
+Glascow coma scale total_first10_missing,0.0
+Glascow coma scale total_first10_max,0.0
+Glascow coma scale total_first25_max,0.0
+Glascow coma scale total_first25_missing,0.0
+Glascow coma scale total_first50_min,0.0
+Glascow coma scale total_first25_min,0.0
+Glascow coma scale total_first50_max,0.0
+Glascow coma scale total_first50_count,0.0
+Glascow coma scale motor response_first10_missing,0.0
+Glascow coma scale motor response_first10_count,0.0
+Glascow coma scale motor response_first25_min,0.0
+Glascow coma scale motor response_first25_max,0.0
+Glascow coma scale motor response_first25_missing,0.0
+Glascow coma scale motor response_first50_missing,0.0
+Glascow coma scale motor response_last25_missing,0.0
+Temperature_first10_missing,0.0
+Temperature_first25_missing,0.0
+Temperature_first50_missing,0.0
+Temperature_last50_missing,0.0
+Temperature_last25_count,0.0
+Glascow coma scale eye opening_last50_missing,0.0
+Glascow coma scale eye opening_last25_missing,0.0
+Glascow coma scale eye opening_last10_missing,0.0
+Glascow coma scale motor response_first10_max,0.0
+Glascow coma scale motor response_first10_skew,0.0
+Fraction inspired oxygen_last10_skew,0.0
+Fraction inspired oxygen_last10_missing,0.0
+Glascow coma scale eye opening_full_missing,0.0
+Glascow coma scale eye opening_first10_min,0.0
+Glascow coma scale eye opening_first10_max,0.0
+Glascow coma scale eye opening_first10_skew,0.0
+Glascow coma scale eye opening_first10_count,0.0
+Glascow coma scale eye opening_first10_missing,0.0
+Glascow coma scale eye opening_first25_mean,0.0
+Glascow coma scale eye opening_first25_min,0.0
+Glascow coma scale eye opening_first25_missing,0.0
+Glascow coma scale eye opening_first50_missing,0.0
+Temperature_last25_missing,0.0
+Temperature_last10_missing,0.0
+Weight_full_missing,0.0
+Weight_first10_std,0.0
+Weight_first10_min,0.0
+Weight_first10_skew,0.0
+Weight_first10_count,0.0
+Weight_first10_missing,0.0
+Weight_first25_mean,0.0
+Weight_first25_std,0.0
+Weight_first25_skew,0.0
+Weight_first25_missing,0.0
+Fraction inspired oxygen_first25_max,0.0
+Fraction inspired oxygen_first25_missing,0.0
+Fraction inspired oxygen_first50_min,0.0
+Fraction inspired oxygen_first50_max,0.0
+Fraction inspired oxygen_first50_count,0.0
+Fraction inspired oxygen_first50_missing,0.0
+Fraction inspired oxygen_last50_missing,0.0
+Fraction inspired oxygen_last25_skew,0.0
+Fraction inspired oxygen_last25_missing,0.0
+Fraction inspired oxygen_last10_min,0.0
+Diastolic blood pressure_last50_count,0.0
+Diastolic blood pressure_last50_missing,0.0
+Diastolic blood pressure_last25_count,0.0
+Diastolic blood pressure_last25_missing,0.0
+Diastolic blood pressure_last10_count,0.0
+Diastolic blood pressure_last10_missing,0.0
+Fraction inspired oxygen_full_max,0.0
+Fraction inspired oxygen_full_missing,0.0
+Fraction inspired oxygen_first10_mean,0.0
+Fraction inspired oxygen_first10_count,0.0
+Fraction inspired oxygen_first10_missing,0.0
+Capillary refill rate_last10_missing,0.0
+Diastolic blood pressure_first10_missing,0.0
+Diastolic blood pressure_first25_missing,0.0
+Diastolic blood pressure_first50_missing,0.0
+Weight_first50_missing,0.0
+Weight_last50_skew,0.0
+Weight_last50_missing,0.0
+Weight_last25_skew,0.0
+Weight_last25_missing,0.0
+Weight_last10_std,0.0
+Weight_last10_min,0.0
+Weight_last10_skew,0.0
+Weight_last10_missing,0.0
+pH_full_missing,0.0
+Capillary refill rate_first25_mean,0.0
+Capillary refill rate_first10_missing,0.0
+Capillary refill rate_first10_skew,0.0
+Capillary refill rate_first10_max,0.0
+Capillary refill rate_first10_min,0.0
+Capillary refill rate_first10_mean,0.0
+Capillary refill rate_full_missing,0.0
+Capillary refill rate_full_count,0.0
+Capillary refill rate_full_skew,0.0
+Capillary refill rate_full_min,0.0
